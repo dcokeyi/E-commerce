@@ -2,13 +2,14 @@ import SHOP_DATA from '../ShopPage/shop.data';
 import CollectionItem from '../Collection-item/collectionItem';
 import '../Collection-item/collection-item.styles.scss'
 
-const Hats = (items) => {
+const Hats = () => {
+    const data = SHOP_DATA.filter( (i) => { return i.title == "Hats"});
+
     return <div className="collection-preview">
-        <h1 className="title">{items.title.toUpperCase()}</h1>
+        {/* <h1 className="title">{data.toUpperCase()}</h1> */}
         <div className="preview">
-            {items.filter((item, idx) => idx < 4)
-                .map(({ id, ...itemProps }) => (
-                    <CollectionItem key={id} {...itemProps} />
+            {data.map(({id, ...otherProps}) => (
+                    <CollectionItem key={id} {...otherProps} />
                 ))}
         </div>
     </div>

@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
+import CartProvider from './Context/cart-provider';
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

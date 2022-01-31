@@ -7,7 +7,8 @@ import './collection-item.styles.scss'
 const CollectionItem = (item) => {
     const cartCtx = useContext(CartContext);
 
-    const {name, price, imageUrl} = item;
+    const { name, price, imageUrl } = item;
+    // console.log(item);
 
     const add = () => {
         cartCtx.addItems(item)

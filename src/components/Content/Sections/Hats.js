@@ -6,9 +6,9 @@ const Hats = () => {
     const data = SHOP_DATA.filter((i) => { return i.title === "Hats" });
 
     return data.map(({ id, ...otherProps }) => (
-            <PagePrev key={id} {...otherProps} />
-        ))
-    
+        <PagePrev key={id} {...otherProps} />
+    ))
+
 
 
 }
